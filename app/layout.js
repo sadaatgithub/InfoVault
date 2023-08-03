@@ -14,11 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className='flex  min-h-screen basis-full max-w-[1440px]'>
+        <main className='flex  min-h-screen basis-full max-w-[1440px] mx-auto relative'>
           <SideBar/>
-        <section className='flex flex-col basis-full'>
+        <section className='flex flex-col w-full'>
         <TopBar/>
-        <div className='bg-[#F4F4F4] h-screen p-10 overflow-y-scroll'>{children}</div>
+        <div className='bg-[#F4F4F4] h-screen md:p-4 lg:p-10 overflow-y-auto'>{children}</div>
         </section>
 
         </main>
