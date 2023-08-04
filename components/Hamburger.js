@@ -1,8 +1,11 @@
-import React from 'react'
+'use client'
+import { burgerContext } from '@/context/burgerContext'
+import React,{useContext} from 'react'
 
-const Hamburger = ({handleBurger}) => {
+const Hamburger = () => {
+  const {handleBurger} = useContext(burgerContext)
   return (
-    <div className='flex flex-col gap-1 p-2 self-start border-2 rounded-md items-center justify-center absolute -right-16 top-16 bg-white ' onClick={handleBurger}>
+    <div className='flex flex-col gap-1 p-3 self-start border-2 rounded-md items-center justify-center  bg-white md:hidden ' onClick={handleBurger}>
         <div className="w-4 h-[2px] bg-black"></div>
         <div className="w-4 h-[2px] bg-black"></div>
         <div className="w-4 h-[2px] bg-black"></div>

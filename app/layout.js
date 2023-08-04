@@ -2,7 +2,11 @@ import SideBar from '@/components/SideBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import TopBar from '@/components/TopBar'
+<<<<<<< HEAD
 import { hamburgerProvider } from '@/context/hamburgerContext'
+=======
+import { BurgerProvider } from '@/context/burgerContext';
+>>>>>>> desktop_v_2
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,10 +16,20 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+//   const [isOpen,setIsOpen] = useState(false)
+
+//   const handleBurger = () =>{
+//     setIsOpen(!isOpen);
+//     console.log(isOpen)
+// }
   return (
     <html lang="en">
       <body className={inter.className}>
+<<<<<<< HEAD
         <hamburgerProvider>
+=======
+        <BurgerProvider>
+>>>>>>> desktop_v_2
         <main className='flex  min-h-screen basis-full max-w-[1440px] mx-auto relative'>
           <SideBar/>
         <section className='flex flex-col w-full'>
@@ -24,7 +38,11 @@ export default function RootLayout({ children }) {
         </section>
 
         </main>
+<<<<<<< HEAD
         </hamburgerProvider>
+=======
+        </BurgerProvider>
+>>>>>>> desktop_v_2
 
         </body>
     </html>

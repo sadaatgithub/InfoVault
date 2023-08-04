@@ -5,7 +5,7 @@ import Table from './Table'
 
 const Dashboard = () => {
   return (
-    <main className='flex flex-col gap-8 bg-white rounded-lg w-full p-3'>
+    <main className='flex flex-col gap-8 bg-white rounded-lg w-full p-3 overflow-hidden'>
         {/* sticky title--------------------------------> */}
         <div className="flex p-3  justify-between w-full flex-wrap-reverse gap-4">
             <div className="flex gap-6 items-center w-full sm:w-auto">
