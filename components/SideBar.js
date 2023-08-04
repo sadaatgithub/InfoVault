@@ -52,11 +52,12 @@ const handleBurger = () =>{
     <aside className={`${isOpen? "translate-x-0 ":"-translate-x-full"} absolute top-0 bottom-0 left-0  md:translate-x-0  z-[1] md:z-0  md:static md:min-w-[60px] lg:w-[268px] 
     lg:py-6 lg:px-3 p-2 flex flex-col gap-y-12 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
       <Logo />
+
       <div className="relative  md:hidden ">
       <Hamburger handleBurger={handleBurger}/>
       </div>
 
-      <ul className="w-full">
+      <ul className="w-full flex flex-col md:gap-y-3 lg:gap-y-0 ">
         {menuItems.map((menu) => (
           // 
           <li key={menu.id} className={`${menu.id == 2? "bg-[#EFEFEF] rounded-xl shadow-inner text-[#1A1D1F]":"text-[#6F767E]"} lg:p-3 p-2 flex gap-3 cursor-pointer`}>

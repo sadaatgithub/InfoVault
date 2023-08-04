@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
+import Logo from './Logo'
+import Link from 'next/link'
 
 const TopBar = () => {
 
 
   return (
-    <div className='px-4 lg:px-10 py-6 flex justify-between bg-[#FCFCFC] shadow-inner shadow-[#F4F4F4 ] flex-col-reverse md:flex-row gap-6'>
+    <div className='px-4 lg:px-10 py-6 flex justify-between bg-[#FCFCFC] shadow-inner shadow-[#F4F4F4 ] flex-col-reverse md:flex-row gap-y-12'>
         <div className="p-2 bg-[#F4F4F4] rounded-xl flex justify-between">
             <div className="flex gap-[2px]">
                 <div className="flex gap-3 items-center">
@@ -17,8 +19,11 @@ const TopBar = () => {
 
             <div className="px-3 py-1 bg-white custom_shadow rounded-xl text-[#1A1D1F] font-semibold">⌘ F</div>
         </div>
-        <div className="flex gap-6">
-            <button className='md:px-[20px] px-3 py-3 rounded-xl bg-[#2460AB] text-white  flex justify-center items-center md:gap-2 gap-[2px] text-[15px] font-bold leading-[24px]'><Image src="/plus.svg" width={24} height={24} alt='create vault' /> Create Vault</button>
+        <div className="flex gap-6 justify-center items-center">
+            <div className="md:hidden ">
+                <Image src='/logo_icon.png' width={35} height={35} alt=''/>
+            </div>
+            <button className='ml-auto md:px-[20px] px-3 py-3 rounded-xl bg-[#2460AB] text-white  flex justify-center items-center md:gap-2 gap-[2px] text-[15px] font-bold leading-[24px]'><Image src="/plus.svg" width={24} height={24} alt='create vault' /> Create Vault</button>
             <div className="relative ml-auto grid place-items-center after:absolute after:content-[''] after:right-0 after:top-[10px] after:w-3 after:h-3 after:bg-[#FF6A55] after:z-[1] after:border-2 after:border-white after:rounded-full">
             <Image src='/message.svg' width={24} height={24} alt='message'/>
             </div>

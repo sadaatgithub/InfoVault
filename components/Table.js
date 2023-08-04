@@ -30,10 +30,29 @@ const tableData = [
 
 ]
 
+const tileBgColor = {
+  1:'bg-[#FF819D]',
+  2:'bg-[#81E8FF]',
+  3:'bg-[#7BC6F0]',
+  4:'bg-[#FFD88D]',
+  5:'bg-[#B5E4CA]',
+  6:'bg-[#B1E5FC]',
+  7:'bg-[#7BC6F0]'
+}
+
 const Table = () => {
+  function getInitials(title) {
+    return title
+    .split(' ')
+    .filter(word => word.length > 0)
+    .map(word => word[0].toUpperCase())
+    .join('');
+  }
+
   return (
     // product table----------------------------------->
-<div className="overflow-x-auto flex flex-col gap-2">
+    <div class="flex flex-col gap-2">
+<div className="overflow-x-auto ">
       {/* table title-------------------> */}
       <table className="min-w-full text-left">
         <thead className="">
@@ -51,15 +70,15 @@ const Table = () => {
         </thead>
 
         <tbody className="">
-            {tableData.map(data =>
+            {tableData.map((data,idx) =>
           <tr className="border-b hover:bg-[#EFEFEF] hover:rounded-lg relative mb-1 mt-1 cursor-pointer">
             <td className="px-4 py-3 w-16 align-top">
               <input type="checkbox" name="" id="" className="h-5 w-5" />
             </td>
             <td className="flex w-[268px]">
               <div className="flex gap-[20px] py-3 ">
-                <div className="py-7 px-[14px] bg-[#FF819D] text-2xl font-bold uppercase h-20 flex justify-center items-center rounded-lg text-[rgba(27,27,27,0.27)]">
-                  pdv
+                <div className={`${tileBgColor[idx+1]} py-7 px-[14px] bg-[#FF819D] text-2xl font-bold uppercase h-20 flex justify-center items-center rounded-lg text-[rgba(27,27,27,0.27)]`}>
+                  {getInitials(data.title)}
                 </div>
                 <div className="flex flex-col gap-1">
                   <h5 className="text-[15px] font-bold leading-6 text-[#1A1D1F] [text-wrap:balanced]">
@@ -111,10 +130,11 @@ const Table = () => {
           
         </tbody>
       </table>
+      </div>
 
       <div className="py-3 flex justify-center gap-2">
         <button className="w-full flex justify-end">
-          <Image src='/left_arrow.svg' width={24} height={24} className="w-10 h-10 p-2" />
+          <Image src='/left_arrow.svg' width={24} height={24} alt="" className="w-10 h-10 p-2" />
         </button>
         <button className="w-full flex justify-start">
         <Image src='/right_arrow.svg' width={24} height={24} alt="" className="border-2 border-[#EFEFEF] rounded-full w-10 h-10 p-2"/>
