@@ -52,7 +52,7 @@ const SideBar = () => {
       <Logo />
 
       <div className={`${burgerOpen? "block":"hidden"} relative  md:hidden z-10`}>
-        <button className="absolute -right-10 -top-0 px-3 py-1 grid place-items-center text-3xl bg-blue-400 text-white rounded-xl" onClick={handleBurger}><span>&times;</span></button>
+        <button className="absolute -right-14 -top-20 px-3 py-1 grid place-items-center text-3xl bg-blue-400 text-white rounded-xl" onClick={handleBurger}><span>&times;</span></button>
       </div>
 
       <ul className="w-full flex flex-col md:gap-y-3 lg:gap-y-0 gap-y-2">
