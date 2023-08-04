@@ -5,7 +5,8 @@ import Table from './Table'
 
 const Dashboard = () => {
   return (
-    <main className='flex flex-col gap-8 bg-white rounded-lg w-full p-3 overflow-hidden'>
+    <main className='flex flex-col gap-8   w-full  overflow-hidden'>
+        <div className="bg-white rounded-lg p-3">
         {/* sticky title--------------------------------> */}
         <div className="flex p-3  justify-between w-full flex-wrap-reverse gap-4">
             <div className="flex gap-6 items-center w-full sm:w-auto">
@@ -21,7 +22,7 @@ const Dashboard = () => {
 
                     </div>
                 
-                    <input type="text"  placeholder='Search Product' className='bg-transparent  text-[#6F767E] font-semibold text-[15px]'/>
+                    <input type="text"  placeholder='Search Product' className='bg-transparent  text-[#6F767E] font-semibold text-[15px] min-w-[100px]'/>
                 </div>
 
             </div>
@@ -33,7 +34,7 @@ const Dashboard = () => {
 
         </div>
         <Table/>
-       
+        </div>
         </main>
   )
 }

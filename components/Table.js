@@ -56,8 +56,8 @@ const Table = () => {
       {/* table title-------------------> */}
       <table className="min-w-full text-left">
         <thead className="">
-          <tr className="[&>th]:text-[13px] [&>th]:font-semibold [&>th]:text-[#6F767E] border-b [&>th]:px-4">
-            <th className="px-3 py-3 w-16  align-top">
+          <tr className="[&>th]:text-[13px] [&>th]:font-semibold [&>th]:text-[#6F767E] border-b [&>th]:px-4 ">
+            <th className="!px-3 py-3 w-16  align-top">
               <input type="checkbox" name="" id="" className="h-5 w-5"/>
             </th>
             <th className="text-left w-[298px]">Product</th>
@@ -71,8 +71,8 @@ const Table = () => {
 
         <tbody className="">
             {tableData.map((data,idx) =>
-          <tr key={data.id} className="border-b hover:bg-[#EFEFEF] hover:rounded-lg relative mb-1 mt-1 cursor-pointer">
-            <td className="px-4 py-3 w-16 align-top">
+          <tr key={data.id} className="border-b hover:bg-[#EFEFEF] hover:rounded-tl-lg relative mb-1 mt-1 cursor-pointer ">
+            <td className="px-3 py-3 w-16 align-top">
               <input type="checkbox" name="" id="" className="h-5 w-5" />
             </td>
             <td className="flex w-[268px]">
