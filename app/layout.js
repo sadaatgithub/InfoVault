@@ -1,7 +1,9 @@
+'use client';
 import SideBar from '@/components/SideBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import TopBar from '@/components/TopBar'
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,13 +13,19 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const [isOpen,setIsOpen] = useState(false)
+
+  const handleBurger = () =>{
+    setIsOpen(!isOpen);
+    console.log(isOpen)
+}
   return (
     <html lang="en">
       <body className={inter.className}>
         <main className='flex  min-h-screen basis-full max-w-[1440px] mx-auto relative'>
-          <SideBar/>
+          <SideBar isOpen={isOpen} handleBurger={handleBurger}/>
         <section className='flex flex-col w-full'>
-        <TopBar/>
+        <TopBar handleBurger={handleBurger}/>
         <div className='bg-[#F4F4F4] h-screen md:p-4 lg:p-10 overflow-y-auto'>{children}</div>
         </section>
 
