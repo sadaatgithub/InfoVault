@@ -77,7 +77,7 @@ const Table = () => {
             </td>
             <td className="flex w-[268px]">
               <div className="flex gap-[20px] py-3 ">
-                <div className={`${tileBgColor[idx+1]} py-7 px-[14px] bg-[#FF819D] text-2xl font-bold uppercase h-20 flex justify-center items-center rounded-lg text-[rgba(27,27,27,0.27)]`}>
+                <div className={`${tileBgColor[data.id]} py-7 px-[14px]  text-2xl font-bold uppercase h-20 flex justify-center items-center rounded-lg text-[rgba(27,27,27,0.27)]`}>
                   {getInitials(data.title)}
                 </div>
                 <div className="flex flex-col gap-1">
