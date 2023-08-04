@@ -71,7 +71,7 @@ const Table = () => {
 
         <tbody className="">
             {tableData.map((data,idx) =>
-          <tr key={data.id} className="border-b hover:bg-[#EFEFEF] hover:rounded-tl-lg relative mb-1 mt-1 cursor-pointer ">
+          <tr key={data.id} className="border-b hover:bg-[#EFEFEF] hover:rounded-tl-lg relative mb-1 mt-1 group cursor-pointer ">
             <td className="px-3 py-3 w-16 align-top">
               <input type="checkbox" name="" id="" className="h-5 w-5" />
             </td>
@@ -124,6 +124,14 @@ const Table = () => {
                         #1A1D1F] rounded-md">8</span>
                         <span className="w-[44px] h-3 bg-[#FF6A55] rounded-sm"></span>
                 </span>
+            </td>
+            <td className="absolute inset-0  z-10 flex justify-end invisible group-hover:visible group-hover:bg-gradient-to-r from-transparent to-gray-300 ">
+              <div className=" w-1/2 flex justify-end py-9 px-6 bg-gradient-to-r from-transparent to-[#EFEFEF ]">
+                <div className="flex gap-8 items-center ">
+                  <button className="text-[#2460AB] text-[15px] font-bold rounded-xl bg-[#FCFCFC] px-5 py-3 border border-[#EFEFEF]">View Details</button>
+                  <button className="text-2xl bg-[#FCFCFC] p-2 rounded-full"><Image src="/dots_horiz.svg" width={20} height={20}/></button>
+                </div>
+              </div>
             </td>
           </tr>
           )}
