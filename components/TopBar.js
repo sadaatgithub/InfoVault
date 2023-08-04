@@ -29,10 +29,10 @@ const TopBar = ({handleBurger}) => {
         <div className="mt-8 md:ml-auto md:mt-0 flex gap-6 justify-center items-center  w-full sm:w-auto">
             
             <button className='md:px-[20px] px-3 py-3 rounded-xl bg-[#2460AB] text-white  flex justify-center items-center md:gap-2 gap-[2px] text-[15px] font-bold leading-[24px]'><Image src="/plus.svg" width={24} height={24} alt='create vault' /> Create Vault</button>
-            <div className="relative ml-auto grid place-items-center after:absolute after:content-[''] after:right-0 after:top-[10px] after:w-3 after:h-3 after:bg-[#FF6A55] after:z-[1] after:border-2 after:border-white after:rounded-full">
+            <div className="relative ml-auto grid place-items-center after:absolute after:content-[''] after:right-0 after:top-0 after:w-3 after:h-3 after:bg-[#FF6A55]  after:border-2 after:border-white after:rounded-full">
             <Image src='/message.svg' width={24} height={24} alt='message'/>
             </div>
-            <div className="relative grid place-items-center after:absolute after:content-[''] after:right-0 after:top-[10px] after:w-3 after:h-3 after:bg-[#FF6A55] after:z-[1] after:border-2 after:border-white after:rounded-full">
+            <div className="relative grid place-items-center after:absolute after:content-[''] after:right-0 after:top-0 after:w-3 after:h-3 after:bg-[#FF6A55]  after:border-2 after:border-white after:rounded-full">
             <Image src='/notification.svg' width={24} height={24} alt='notification'/>
             </div>
             <div className="bg-[#FFBC99] w-12 h-12 rounded-full overflow-hidden">
