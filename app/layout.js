@@ -2,6 +2,7 @@ import SideBar from '@/components/SideBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import TopBar from '@/components/TopBar'
+import { hamburgerProvider } from '@/context/hamburgerContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <hamburgerProvider>
         <main className='flex  min-h-screen basis-full max-w-[1440px] mx-auto relative'>
           <SideBar/>
         <section className='flex flex-col w-full'>
@@ -22,7 +24,7 @@ export default function RootLayout({ children }) {
         </section>
 
         </main>
-
+        </hamburgerProvider>
 
         </body>
     </html>
