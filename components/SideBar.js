@@ -53,9 +53,9 @@ const handleBurger = () =>{
     lg:py-6 lg:px-3 p-2 flex flex-col gap-y-12 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
       <Logo />
 
-      <div className="relative  md:hidden ">
+      {/* <div className="relative  md:hidden ">
       <Hamburger handleBurger={handleBurger}/>
-      </div>
+      </div> */}
 
       <ul className="w-full flex flex-col md:gap-y-3 lg:gap-y-0 ">
         {menuItems.map((menu) => (

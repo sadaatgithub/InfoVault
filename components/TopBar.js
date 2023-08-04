@@ -33,9 +33,9 @@ const TopBar = () => {
             <Image src='/avatar.png' width={640} height={420} alt='avatar'/>
             </div>
         </div>
-        <div className="md:hidden bg-white">
+        {/* <div className="md:hidden bg-white">
                 <Image src='/logo.png' width={180} height={37} alt=''/>
-            </div>
+            </div> */}
         </div>
   )
 }
