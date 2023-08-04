@@ -71,7 +71,7 @@ const Table = () => {
 
         <tbody className="">
             {tableData.map((data,idx) =>
-          <tr className="border-b hover:bg-[#EFEFEF] hover:rounded-lg relative mb-1 mt-1 cursor-pointer">
+          <tr key={data.id} className="border-b hover:bg-[#EFEFEF] hover:rounded-lg relative mb-1 mt-1 cursor-pointer">
             <td className="px-4 py-3 w-16 align-top">
               <input type="checkbox" name="" id="" className="h-5 w-5" />
             </td>
@@ -104,7 +104,7 @@ const Table = () => {
             <td className="align-top py-3 px-3 text-[11px] font-semibold [&>span]:p-1 -space-x-1 ">
                 {data.members?.map((members,idx) => {
                     const bgColor = idx===0? "bg-orange-300":idx===1? "bg-violet-300":"bg-sky-300";
-                        return <span className={`${bgColor} rounded-full`}>{members}</span>
+                        return <span key={idx} className={`${bgColor} rounded-full`}>{members}</span>
                         
                 }
                 
