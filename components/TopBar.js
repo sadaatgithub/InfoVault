@@ -11,18 +11,18 @@ const TopBar = ({handleBurger}) => {
     <div className='md:ml-12 lg:ml-0 px-4 lg:px-10 py-6 grid md:grid-cols-2 grid-cols-1  bg-[#FCFCFC] shadow-inner shadow-[#F4F4F4 ]  gap-y-4 flex-wrap'>
        
         <div className="flex gap-2  items-center  w-full lg:w-auto">
-        <div className=""> <Hamburger handleBurger={handleBurger}/></div>
+        <div className="lg:hidden"> <Hamburger handleBurger={handleBurger}/></div>
 
-            <div className="p-2 bg-[#F4F4F4] rounded-xl flex justify-between w-full md:max-w-[344px] h-12">
+            <div className="p-2 bg-[#F4F4F4] rounded-xl flex justify-between w-full md:max-w-[360px] h-12">
                 <div className="flex gap-[2px]">
                     <div className="flex gap-3 items-center">
                     <Image src='/search.svg' width={24} height={24} alt='search icon'/>
                     <div className="h-[20px] w-[2px] bg-[#2A85FF] rounded-sm"></div>
                     </div>
-                    <input type="text" placeholder="Search by Vault or Users" className='bg-transparent   border-blue-700 text-[#6F767E] font-semibold text-[15px] w-[170px] sm:w-auto'/>
+                    <input type="text" placeholder="Search by Vault or Users" className='bg-transparent   border-blue-700 text-[#6F767E] font-semibold text-[15px]  md:w-[170px] lg:w-auto'/>
                 </div>
 
-                <div className=" px-3 py-1 bg-white custom_shadow rounded-xl text-[#1A1D1F] font-semibold md:hidden lg:block">⌘ F</div>
+                <div className=" px-3 py-1 bg-white custom_shadow rounded-xl text-[#1A1D1F] font-semibold ">⌘ F</div>
             </div>
         </div>
 

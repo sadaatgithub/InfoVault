@@ -47,7 +47,7 @@ const SideBar = () => {
 
 
   return (
-    <aside className={`${burgerOpen? "lg:w-[60px] lg:px-0 " : "left-0 -translate-x-full  md:w-[60px] lg:w-[268px] px-3"} absolute top-0 bottom-0 z-[1] md:-translate-x-0  lg:static 
+    <aside className={`${burgerOpen? "" : "left-0 -translate-x-full  md:w-[60px]  md:-translate-x-0 px-3"} absolute top-0 bottom-0 z-[1]  lg:w-[268px] lg:static 
     py-6 px-3 md:px-2  flex flex-col gap-y-12 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
       <Logo />
 
