@@ -5,7 +5,7 @@ import Table from './Table'
 
 const Dashboard = () => {
   return (
-    <main className='flex flex-col gap-8   w-full  overflow-hidden'>
+    <main className='flex flex-col gap-8   w-full  overflow-hidden md:pl-14 lg:pl-0'>
         <div className="bg-white rounded-lg p-3">
         {/* sticky title--------------------------------> */}
         <div className="flex p-3  justify-between w-full flex-wrap-reverse gap-4">
@@ -15,14 +15,14 @@ const Dashboard = () => {
                     <h6 className='text-[20px] font-semibold leading-[32px] text-[#1A1D1F]'>Vaults</h6>
                 </div>
 
-                <div className="flex gap-[2px] bg-[#F4F4F4] p-2 rounded-xl w-full">
+                <div className="flex gap-[2px] bg-[#F4F4F4] p-1 rounded-xl w-full">
                     <div className="flex gap-3 items-center">
                     <Image src='/search.svg' width={24} height={24} alt='search Product'/>
                         <div className="h-[20px] w-[2px] bg-[#2A85FF] rounded-sm"></div>
 
                     </div>
                 
-                    <input type="text"  placeholder='Search Product' className='bg-transparent  text-[#6F767E] font-semibold text-[15px] min-w-[100px]'/>
+                    <input type="text"  placeholder='Search Product' className='bg-transparent  text-[#6F767E] font-semibold text-[15px]  w-[170px] p-1 sm:w-auto'/>
                 </div>
 
             </div>

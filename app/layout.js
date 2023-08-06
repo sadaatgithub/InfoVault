@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <BurgerProvider>
-        <main className='flex  min-h-screen basis-full max-w-[1440px] mx-auto relative'>
+        <main className='flex  min-h-screen w-full max-w-[1440px] mx-auto relative'>
           <SideBar/>
         <section className='flex flex-col w-full'>
         <TopBar/>

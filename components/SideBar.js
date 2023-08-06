@@ -47,20 +47,23 @@ const SideBar = () => {
 
 
   return (
-    <aside className={`${burgerOpen? "translate-x-0 ":"-translate-x-full   "} absolute top-0 bottom-0 left-0 md:min-w-[60px]  lg:w-[268px] md:translate-x-0   z-[1]  md:static 
-    md:py-6 md:px-3 p-4 flex flex-col gap-y-12 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
+    <aside className={`${burgerOpen? "lg:w-[60px] lg:px-0 " : "left-0 -translate-x-full  md:w-[60px] lg:w-[268px] px-3"} absolute top-0 bottom-0 z-[1] md:-translate-x-0  lg:static 
+    py-6 px-3 md:px-2  flex flex-col gap-y-12 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
       <Logo />
 
-      <div className={`${burgerOpen? "block":"hidden"} relative  md:hidden z-10`}>
+      <div className={`${burgerOpen? "":"hidden"} relative  lg:hidden z-10`}>
         <button className="absolute -right-14 -top-20 px-3 py-1 grid place-items-center text-3xl bg-blue-400 text-white rounded-xl" onClick={handleBurger}><span>&times;</span></button>
       </div>
 
       <ul className="w-full flex flex-col md:gap-y-3 lg:gap-y-0 gap-y-2">
         {menuItems.map((menu) => (
           // 
-          <li key={menu.id} className={`${menu.id == 2? "bg-[#EFEFEF] rounded-xl shadow-inner text-[#1A1D1F]":"text-[#6F767E]"} lg:p-3 p-2 flex gap-3 cursor-pointer`}>
-            <Image src={menu.icon} width={24} height={24} alt=''/>
-            <span className={`md:hidden lg:block text-[15px] -tracking-[-0.15px] leading-[24px] font-semibold `}>{menu.title}</span>
+          <li key={menu.id} className={`${menu.id == 2? "bg-[#EFEFEF] rounded-xl shadow-inner text-[#1A1D1F]":"text-[#6F767E]"}  ${burgerOpen? "":""}    cursor-pointer flex items-center`}>
+            
+            <div className={`${burgerOpen? "lg:grid place-items-center lg:w-full":""} p-2 `}>
+              <Image src={menu.icon} width={24} height={24} alt='' className=""/>
+              </div>
+            <span className={`${burgerOpen? "lg:hidden":"md:hidden lg:block"}  text-[15px] -tracking-[-0.15px] leading-[24px] font-semibold duration-200 `}>{menu.title}</span>
           </li>
         ))}
       </ul>

@@ -125,8 +125,8 @@ const Table = () => {
                         <span className="w-[44px] h-3 bg-[#FF6A55] rounded-sm"></span>
                 </span>
             </td>
-            <td className="absolute inset-0  z-10 flex justify-end invisible group-hover:visible group-hover:bg-gradient-to-r from-transparent to-gray-300 ">
-              <div className=" w-1/2 flex justify-end py-9 px-6 bg-gradient-to-r from-transparent to-[#EFEFEF ]">
+            <td className="absolute left-1/3 top-0 right-0 bottom-0  z-10 flex justify-end invisible group-hover:visible group-hover:bg-gradient-to-r from-transparent to-gray-300 ">
+              <div className=" w-full flex justify-end py-9 px-6 bg-gradient-to-r from-[#efefef9c] to-[#EFEFEF]">
                 <div className="flex gap-8 items-center ">
                   <button className="text-[#2460AB] text-[15px] font-bold rounded-xl bg-[#FCFCFC] px-5 py-3 border border-[#EFEFEF]">View Details</button>
                   <button className="text-2xl bg-[#FCFCFC] p-2 rounded-full"><Image src="/dots_horiz.svg" width={20} height={20}/></button>
