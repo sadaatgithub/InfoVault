@@ -56,8 +56,8 @@ const Table = () => {
       {/* table title-------------------> */}
       <table className="min-w-full text-left">
         <thead className="">
-          <tr className="[&>th]:text-[13px] [&>th]:font-semibold [&>th]:text-[#6F767E] border-b [&>th]:px-4 ">
-            <th className="!px-3 py-3 w-16  align-top">
+          <tr className="[&>th]:text-[13px] [&>th]:font-semibold [&>th]:text-[#6F767E] border-b [&>th]:pl-2 h-[41px] [&>th]:align-top">
+            <th className="!pl-3  w-16">
               <input type="checkbox" name="" id="" className="h-5 w-5"/>
             </th>
             <th className="text-left w-[298px]">Product</th>
@@ -71,7 +71,7 @@ const Table = () => {
 
         <tbody className="">
             {tableData.map((data,idx) =>
-          <tr key={data.id} className="border-b hover:bg-[#EFEFEF] hover:rounded-tl-lg relative mb-1 mt-1 group cursor-pointer ">
+          <tr key={data.id} className="border-b hover:bg-[#EFEFEF] hover:rounded-tl-lg relative mb-1 mt-1 group cursor-pointer [&>td]:px-2">
             <td className="px-3 py-3 w-16 align-top">
               <input type="checkbox" name="" id="" className="h-5 w-5" />
             </td>
@@ -90,18 +90,18 @@ const Table = () => {
                 </div>
               </div>
             </td>
-            <td className="align-top py-3 px-4">
+            <td className="align-top py-3">
               <span className="px-2 bg-[#EAFAE4] text-[#83BF6E] text-[15px] font-semibold">
                 {data.isActive && 'Active'}
               </span>
             </td>
-            <td className="align-top py-3 px-3">
+            <td className="align-top py-3">
               <span className="text-[13px] font-semibold text-[#9A9FA5] flex flex-col">
                 {data.date} 
                 <span>{data.time}</span>
               </span>
             </td>
-            <td className="align-top py-3 px-3 text-[11px] font-semibold [&>span]:p-1 -space-x-1 ">
+            <td className="align-top py-3 text-[11px] font-semibold [&>span]:p-1 -space-x-1 ">
                 {data.members?.map((members,idx) => {
                     const bgColor = idx===0? "bg-orange-300":idx===1? "bg-violet-300":"bg-sky-300";
                         return <span key={idx} className={`${bgColor} rounded-full`}>{members}</span>
@@ -112,20 +112,20 @@ const Table = () => {
                 )}
               
             </td>
-            <td className="align-top py-3 px-3">
+            <td className="align-top py-3 ">
                 <span className="flex items-center gap-2">
                     <span className="px-[7px] bg-[#EFEFEF] text-[#1A1D1F] rounded-md">48K</span>
                     <span className="w-2 h-3 bg-sky-500 rounded-sm"></span>
                 </span>
             </td>
-            <td className="align-top py-3 px-3">
+            <td className="align-top py-3">
                 <span className="flex items-center gap-2">
                     <span className="px-[7px] bg-[#EFEFEF] text-[
                         #1A1D1F] rounded-md">8</span>
                         <span className="w-[44px] h-3 bg-[#FF6A55] rounded-sm"></span>
                 </span>
             </td>
-            <td className="absolute left-1/3 top-0 right-0 bottom-0  z-10 flex justify-end invisible group-hover:visible group-hover:bg-gradient-to-r from-transparent to-gray-300 ">
+            <td className="absolute left-1/3 top-0 right-0 bottom-0  z-10 flex justify-end invisible group-hover:visible group-hover:bg-gradient-to-r from-transparent to-gray-300 !px-0">
               <div className=" w-full flex justify-end py-9 px-6 bg-gradient-to-r from-[#efefef9c] to-[#EFEFEF]">
                 <div className="flex gap-8 items-center ">
                   <button className="text-[#2460AB] text-[15px] font-bold rounded-xl bg-[#FCFCFC] px-5 py-3 border border-[#EFEFEF]">View Details</button>

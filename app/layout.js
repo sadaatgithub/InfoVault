@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           <SideBar/>
         <section className='flex flex-col w-full'>
         <TopBar/>
-        <div className='bg-[#F4F4F4] h-screen md:p-4 lg:p-10 overflow-y-auto'>{children}</div>
+        <div className='bg-[#F4F4F4] h-screen md:p-4 lg:p-10 lg:pr-24 overflow-y-auto'>{children}</div>
         </section>
 
         </main>
