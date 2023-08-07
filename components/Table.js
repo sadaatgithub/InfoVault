@@ -72,7 +72,7 @@ const Table = () => {
         <tbody className="">
             {tableData.map((data,idx) =>
           <tr key={data.id} className="border-b hover:bg-[#EFEFEF] hover:rounded-tl-lg relative mb-1 mt-1 group cursor-pointer [&>td]:px-2">
-            <td className="px-3 py-3 w-16 align-top">
+            <td className="!pl-3 py-3 w-16 align-top">
               <input type="checkbox" name="" id="" className="h-5 w-5" />
             </td>
             <td className="flex w-[268px]">
