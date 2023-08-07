@@ -47,7 +47,7 @@ const SideBar = () => {
 
 
   return (
-    <aside className={`${burgerOpen? "px-3" : "left-0 -translate-x-full  md:w-[60px]  md:-translate-x-0 px-1"} absolute top-0 bottom-0 z-[1]  lg:w-[268px] lg:static 
+    <aside className={`${burgerOpen? "px-3" : "left-0 -translate-x-full  md:w-[60px]  md:-translate-x-0 md:px-1 lg:px-3"} absolute top-0 bottom-0 z-[1]  lg:w-[268px] lg:static 
     py-6    flex flex-col gap-y-12 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
       <Logo />
 
@@ -55,7 +55,7 @@ const SideBar = () => {
         <button className="absolute -right-14 -top-20 px-3 py-1 grid place-items-center text-3xl bg-blue-400 text-white rounded-xl" onClick={handleBurger}><span>&times;</span></button>
       </div>
 
-      <ul className="w-full flex flex-col md:gap-y-2 lg:gap-y-0 gap-y-2">
+      <ul className="w-full flex flex-col lg:gap-y-0 ">
         {menuItems.map((menu) => (
           // 
           <li key={menu.id} className={`${menu.id == 2? "bg-[#EFEFEF] rounded-xl shadow-inner text-[#1A1D1F]":"text-[#6F767E]"}  ${burgerOpen? "":""}    cursor-pointer flex items-center p-3 gap-3`}>
