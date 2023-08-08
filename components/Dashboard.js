@@ -6,7 +6,7 @@ import Table from './Table'
 const Dashboard = () => {
   return (
     <main className=' h-auto overflow-hidden md:pl-14 lg:pl-0 w-full'>
-        <div className="bg-white rounded-lg p-3 flex flex-col gap-y-8 ">
+        <div className="bg-[#FCFCFC] rounded-lg p-3 flex flex-col gap-y-8 ">
         {/* sticky title--------------------------------> */}
         <div className="flex p-3  justify-between w-full flex-wrap-reverse gap-4 ">
             <div className="flex gap-6 items-center  w-full sm:max-w-[503px] md:max-w-[403px]">

@@ -51,8 +51,8 @@ const SideBar = () => {
     py-6    flex flex-col gap-y-12 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
       <Logo />
 
-      <div className={`${burgerOpen? "":"hidden"} relative  lg:hidden z-10`}>
-        <button className="absolute -right-14 -top-20 px-3 py-1 grid place-items-center text-3xl bg-blue-400 text-white rounded-xl" onClick={handleBurger}><span>&times;</span></button>
+      <div className={` relative  z-10`}>
+        <button className={`${burgerOpen? "":"hidden"} absolute -right-14 -top-20 px-3 py-1 grid place-items-center text-3xl bg-blue-400 text-white rounded-xl`} onClick={handleBurger}><span>&times;</span></button>
       </div>
 
       <ul className="w-full flex flex-col lg:gap-y-0 ">
