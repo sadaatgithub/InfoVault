@@ -19,7 +19,7 @@ const TopBar = ({handleBurger}) => {
                     <Image src='/search.svg' width={24} height={24} alt='search icon'/>
                     <div className="h-[20px] w-[2px] bg-[#2A85FF] rounded-sm"></div>
                     </div>
-                    <input type="text" placeholder="Search by Vault or Users" className='bg-transparent   border-blue-700 text-[#6F767E] font-semibold text-[15px]  md:w-[170px] lg:w-auto'/>
+                    <input type="text" placeholder="Search by Vault or Users" className='bg-transparent   border-blue-700 text-[#6F767E] font-semibold text-[15px] w-[170px] lg:w-auto'/>
                 </div>
 
                 <div className=" px-3 py-1 bg-white custom_shadow rounded-xl text-[#1A1D1F] font-semibold ">⌘ F</div>
