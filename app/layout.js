@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <BurgerProvider>
         <main className='flex  min-h-screen w-full max-w-[1440px] mx-auto relative -tracking-[0.15px]'>
           <SideBar/>
-        <section className='flex flex-col w-full h-screen'>
+        <section className='flex flex-col h-screen w-[1172px] overflow-scroll'>
         <TopBar/>
         <div className='bg-[#F4F4F4] min-h-screen md:p-4 lg:p-10 lg:pr-24 overflow-y-scroll '>{children}</div>
         </section>

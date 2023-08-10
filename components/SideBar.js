@@ -47,23 +47,27 @@ const SideBar = () => {
 
 
   return (
-    <aside className={`${burgerOpen? "px-3" : "left-0 -translate-x-full  md:w-[60px]  md:-translate-x-0 md:px-1 lg:px-3"} absolute top-0 bottom-0 z-[1]  lg:w-[268px] lg:static 
-    py-6    flex flex-col gap-y-12 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
+    <aside className={`${burgerOpen? "px-2" : "left-0 -translate-x-full  md:w-[60px]  md:-translate-x-0 md:px-1 xl:px-6"} absolute top-0 bottom-0 z-[1] lg:w-[268px] lg:static 
+    py-6    flex flex-col gap-y-6 bg-[#FCFCFC] transition-all duration-300 ease-in-out`}>
       <Logo />
 
       <div className={` relative  z-10`}>
-        <button className={`${burgerOpen? "":"hidden"} absolute -right-12 -top-20 px-3 py-1 grid place-items-center text-3xl bg-white text-black rounded-xl border`} onClick={handleBurger}><span>&times;</span></button>
+        <button className={`${burgerOpen? "":"hidden"} absolute -right-12 -top-20 px-3 py-1 grid place-items-center text-xl bg-white text-gray-700 rounded-full border shadow-md font-bold`} onClick={handleBurger}><span>X</span></button>
       </div>
 
-      <ul className="w-full flex flex-col lg:gap-y-0 ">
+      <ul className="w-full flex flex-col ">
         {menuItems.map((menu) => (
           // 
-          <li key={menu.id} className={`${menu.id == 2? "bg-[#EFEFEF] rounded-xl shadow-inner text-[#1A1D1F]":"text-[#6F767E]"}  ${burgerOpen? "":""}    cursor-pointer flex items-center p-3 gap-3`}>
+          <li key={menu.id} className={`${menu.id == 2? "bg-[#EFEFEF] rounded-xl shadow-inner text-[#1A1D1F]":"text-[#6F767E]"}  ${burgerOpen? "":""} p-3 cursor-pointer flex items-center  gap-3`}>
             
             <div className={`${burgerOpen? "lg:grid place-items-center lg:w-full":""} `}>
-              <Image src={menu.icon} width={24} height={24} alt='' className="block"/>
+              <Image src={menu.icon} width={24} height={24} alt='' className="block min-w-6 min-h-6"/>
               </div>
-            <span className={`${burgerOpen? "lg:hidden":"md:hidden lg:block"}  text-[15px] -tracking-[0.15px] leading-[24px] font-semibold duration-200 `}>{menu.title}</span>
+             
+              <span className={`${burgerOpen? "lg:hidden":"md:hidden lg:block"}  text-[15px] -tracking-[0.15px] leading-[24px] font-semibold duration-200 overflow-hidden `}>{menu.title}</span>
+              {/* <div className="grid [grid-template-columns:0fr] ">
+            <span className={`${burgerOpen? "":""}  text-[15px] -tracking-[0.15px] leading-[24px] font-semibold duration-200 overflow-hidden`}>{menu.title}</span>
+            </div> */}
           </li>
         ))}
       </ul>

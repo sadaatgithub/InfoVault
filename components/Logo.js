@@ -7,10 +7,9 @@ const Logo = () => {
   const {burgerOpen} = useContext(burgerContext)
 
   return (
-    <div className={`${burgerOpen? "md:w-30 justify-center":"lg:w-40"}   h-9 flex items-center gap-4`}>
-        <Image src="/logo_icon.png" width={35} height={35} alt='logo'/>
-        <Image src="/logo_name.png" width={200} height={150} alt='logo' className={`${burgerOpen? "md:block lg:hidden":"md:hidden lg:block"} h-9 w-full`}/>
-        {/* <h2 className='text-3xl  text-[#2460AB]'>Infovault</h2> */}
+    <div className={`${burgerOpen? "":" md:justify-center "}   h-[37px] flex items-center`}>
+        <Image src="/logo_icon.png" width={502} height={108} alt='logo' className='w-8 h-7 self-center object-contain'/>
+        <Image src="/logo_name.png" width={200} height={150} alt='logo' className={`${burgerOpen? "md:block lg:hidden":"md:hidden lg:block"} h-9 object-left object-contain `}/>
     </div>
   )
 }
