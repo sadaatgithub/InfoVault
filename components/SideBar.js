@@ -58,7 +58,7 @@ const SideBar = () => {
       <ul className="w-full flex flex-col ">
         {menuItems.map((menu) => (
           // 
-          <li key={menu.id} className={`${menu.id == 2? "bg-[#EFEFEF] rounded-xl shadow-inner text-[#1A1D1F]":"text-[#6F767E]"}  ${burgerOpen? "":""} p-3 cursor-pointer flex items-center  gap-3`}>
+          <li key={menu.id} className={`${menu.id == 2? "bg-[#EFEFEF] rounded-xl shadow_btn text-[#1A1D1F]":"text-[#6F767E]"}  ${burgerOpen? "":""} p-3 cursor-pointer flex items-center  gap-3`}>
             
             <div className={`${burgerOpen? "lg:grid place-items-center lg:w-full":""} `}>
               <Image src={menu.icon} width={24} height={24} alt='' className="block min-w-6 min-h-6"/>
@@ -76,3 +76,5 @@ const SideBar = () => {
 };
 
 export default SideBar;
+
+
